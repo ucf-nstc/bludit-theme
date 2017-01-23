@@ -9,10 +9,10 @@
     <title><?php echo $Site->title() ?></title>
 
     <!-- CSS -->
-    <?php Theme::css('public/css/styles.css'); ?>
+    <?php Theme::css('styles.css', HTML_PATH_THEME . 'public/css/'); ?>
 
     <!-- JavaScript -->
-    <?php Theme::javascript('public/js/main.js'); ?>
+    <?php Theme::javascript('main.js', HTML_PATH_THEME . 'public/js/'); ?>
 
     <!-- Plugins site head -->
     <?php Theme::plugins('siteHead'); ?>
