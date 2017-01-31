@@ -1,1 +1,36 @@
-//test
+// Base
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+// utility
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.hidden-sm {
+  display: none;
+}

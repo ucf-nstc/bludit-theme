@@ -1,0 +1,41 @@
+.home {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+
+	div {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		margin: 0;
+		padding: 0;
+		background-size: auto 100%; // Center those images
+		background-repeat: no-repeat;
+		background-position: center;
+
+		@include transition(background-size 0.2s ease-in);
+
+		p,
+		h2,
+		h3 {
+			padding: 0 5%;
+			color: $white;
+		}
+
+		.hidden-text {
+			display: none;
+			@include transition(display 0.2s ease-in);
+		}
+	}
+
+	div:hover {
+		background-size: auto 120%;
+	}
+
+	div:hover + div.hidden-text {
+		display: block;
+	}
+}

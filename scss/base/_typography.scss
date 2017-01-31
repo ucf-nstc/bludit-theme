@@ -1,0 +1,25 @@
+// Typography
+
+* {
+	font-family: $font-family;
+}
+
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-heavy {
+  font-weight: $font-weight-heavy;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	border-bottom: 2px $white solid;
+}

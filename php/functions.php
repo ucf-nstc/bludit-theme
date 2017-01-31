@@ -25,8 +25,7 @@ function page_content($page) {
 function page_cover_image($page) {
 	global $pages;
 	$url;
-	$url = HTML_PATH_THEME 
-		   . 'public/img/' 
+	$url = HTML_PATH_UPLOADS  
 		   . $pages[$page]->vars['coverImage'];
 	return $url;
 }

@@ -1,6 +1,17 @@
 // main.scss
-// this is a comment
 
+// Base
 @import 'base/base';
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/mixins';
+
+// Layout
 @import 'layout/layout';
 @import 'layout/grid';
+
+// Modules
+@import 'modules/nav';
+
+// Theme
+@import 'theme/home';

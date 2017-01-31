@@ -25,4 +25,6 @@
     <?php Theme::plugins('siteHead'); ?>
 
 </head>
-<body>
+
+<body class>
+    <?php require_once(THEME_DIR_PHP . '/nav.php'); ?>
