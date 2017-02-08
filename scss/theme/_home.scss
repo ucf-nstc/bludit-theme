@@ -3,39 +3,53 @@
 	padding: 0;
 	height: 100vh;
 	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
 
 	div {
+		// width: 100%;
 		display: flex;
-		flex: 1;
-		flex-direction: column;
-		justify-content: flex-end;
+		flex-direction: row;
+		flex-flow: row wrap;
+		flex: 0 0 100%;
+		align-content: flex-end;
 
 		margin: 0;
 		padding: 0;
-		background-size: auto 100%; // Center those images
+		background-size: cover; // Center those images
 		background-repeat: no-repeat;
 		background-position: center;
 
-		@include transition(background-size 0.2s ease-in);
+		h2 {
+			padding: 15% 5% 2%;
+		}
 
+		p {
+			padding: 0 5% 30%;
+		}
 		p,
 		h2,
 		h3 {
-			padding: 0 5%;
+			margin: 0;
+			flex: 0 0 100%;
 			color: $white;
 		}
+	}
 
-		.hidden-text {
-			display: none;
-			@include transition(display 0.2s ease-in);
+	@media only screen and (min-width: $breakpoint-med) {
+
+
+		div {
+			width: auto;
+			background-size: auto 100%; // Center those images
+			flex: 1;
+
+			@include transition(background-size 0.2s ease-in);
+			
 		}
-	}
 
-	div:hover {
-		background-size: auto 120%;
-	}
-
-	div:hover + div.hidden-text {
-		display: block;
+		div:hover {
+			background-size: auto 120%;
+		}
 	}
 }

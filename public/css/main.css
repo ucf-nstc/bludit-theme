@@ -150,56 +150,74 @@ a:hover {
   .hidden-sm {
     display: block; } }
 
-.nav-toggle {
+#nav-toggle {
   position: fixed;
+  right: 0;
   margin: 5%;
   padding-bottom: 2px;
   color: #fff; }
 
 nav {
-  display: none;
   position: fixed;
-  width: 33.3333%;
+  right: 0;
+  width: 100%;
   box-sizing: border-box;
   color: #000;
   background-color: #fff;
-  text-align: left;
+  text-align: center;
   padding: 5%; }
   nav ul {
     padding: 0;
     list-style: none; }
+    nav ul li {
+      padding: 5% 0; }
+  @media only screen and (min-width: 720px) {
+    nav {
+      width: 33.3333%;
+      text-align: right; } }
+
+.closed {
+  display: none; }
+
+.open {
+  display: block; }
 
 .home {
   margin: 0;
   padding: 0;
   height: 100vh;
-  display: flex; }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
   .home div {
     display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    flex-flow: row wrap;
+    flex: 0 0 100%;
+    align-content: flex-end;
     margin: 0;
     padding: 0;
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    -moz-transition: background-size 0.2s ease-in;
-    -o-transition: background-size 0.2s ease-in;
-    -webkit-transition: background-size 0.2s ease-in;
-    transition: background-size 0.2s ease-in; }
+    background-position: center; }
+    .home div h2 {
+      padding: 15% 5% 2%; }
+    .home div p {
+      padding: 0 5% 30%; }
     .home div p,
     .home div h2,
     .home div h3 {
-      padding: 0 5%;
+      margin: 0;
+      flex: 0 0 100%;
       color: #fff; }
-    .home div .hidden-text {
-      display: none;
-      -moz-transition: display 0.2s ease-in;
-      -o-transition: display 0.2s ease-in;
-      -webkit-transition: display 0.2s ease-in;
-      transition: display 0.2s ease-in; }
-  .home div:hover {
-    background-size: auto 120%; }
-  .home div:hover + div.hidden-text {
-    display: block; }
+  @media only screen and (min-width: 720px) {
+    .home div {
+      width: auto;
+      background-size: auto 100%;
+      flex: 1;
+      -moz-transition: background-size 0.2s ease-in;
+      -o-transition: background-size 0.2s ease-in;
+      -webkit-transition: background-size 0.2s ease-in;
+      transition: background-size 0.2s ease-in; }
+    .home div:hover {
+      background-size: auto 120%; } }

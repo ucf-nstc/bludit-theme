@@ -1,6 +1,5 @@
-<a href="#" class="nav-toggle">menu.</a>
-<nav>
-	<h2>MISA Center</h2>
+<a href="#" id="nav-toggle">menu.</a>
+<nav class="closed">
 	<ul>
 		<li><a href="#">Home</a></li>
 		<li><a href="#">About</a></li>
